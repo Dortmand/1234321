@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Expiry Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Product Expiry Manager</h1>
+    
+    <!-- Форма добавления товара -->
+    <form id="productForm" enctype="multipart/form-data">
+        <label for="productImage">Upload Product Image:</label>
+        <input type="file" id="productImage" name="productImage" accept="image/*"><br><br>
+        
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required><br><br>
+        
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate"><br><br>
+        
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate"><br><br>
+        
+        <label for="duration">Duration (in days):</label>
+        <input type="number" id="duration" name="duration"><br><br>
+        
+        <button type="button" onclick="addProduct()">Add Product</button>
+    </form>
+    
+    <h2>Product List</h2>
+    <ul id="productList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
